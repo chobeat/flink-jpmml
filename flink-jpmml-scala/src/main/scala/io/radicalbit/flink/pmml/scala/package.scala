@@ -24,7 +24,7 @@ import io.radicalbit.flink.pmml.scala.api.functions.{EvaluationCoFunction, Evalu
 import io.radicalbit.flink.pmml.scala.api.reader.ModelReader
 import io.radicalbit.flink.pmml.scala.models.control.ServingMessage
 import io.radicalbit.flink.pmml.scala.models.input.BaseEvent
-import io.radicalbit.flink.pmml.scala.models.prediction.Prediction
+import io.radicalbit.flink.pmml.scala.models.prediction.{Prediction}
 import org.apache.flink.api.common.typeinfo.TypeInformation
 import org.apache.flink.ml.math.Vector
 import org.apache.flink.streaming.api.functions.co.CoProcessFunction

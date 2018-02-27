@@ -23,9 +23,9 @@ import java.io.StringReader
 import java.util
 
 import io.radicalbit.flink.pmml.scala.api.exceptions.{InputValidationException, JPMMLExtractionException}
-import io.radicalbit.flink.pmml.scala.api.pipeline.Pipeline
+import io.radicalbit.flink.pmml.scala.api.pipeline.PMMLPipeline
 import io.radicalbit.flink.pmml.scala.api.reader.ModelReader
-import io.radicalbit.flink.pmml.scala.models.prediction.Prediction
+import io.radicalbit.flink.pmml.scala.models.prediction.{PMMLPrediction, Prediction}
 import org.apache.flink.ml.math.Vector
 import org.dmg.pmml.FieldName
 import org.jpmml.evaluator._
@@ -83,7 +83,7 @@ object PmmlModel {
   *
   * @param evaluator The PMML model instance
   */
-class PmmlModel(private[api] val evaluator: Evaluator) extends Pipeline {
+class PmmlModel(private[api] val evaluator: Evaluator) extends Model2 with PMMLPipeline {
 
   import io.radicalbit.flink.pmml.scala.api.converter.VectorConverter._
 
@@ -115,7 +115,7 @@ class PmmlModel(private[api] val evaluator: Evaluator) extends Pipeline {
       extractResult
     }
 
-    Prediction.extractPrediction(result)
+    PMMLPrediction.extractPrediction(result)
   }
 
   /** Validates the input vector in size terms and converts it as a `Map[String, Any]` (see [[PmmlInput]])

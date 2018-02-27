@@ -27,7 +27,7 @@ import scala.util.control.NonFatal
 import scala.util.{Failure, Success, Try}
 
 /** Factory for [[Prediction]] case class instances */
-object Prediction extends LazyLogging {
+  object PMMLPrediction extends LazyLogging {
 
   /** Evaluates [[Try]] statement executed at [[io.radicalbit.flink.pmml.scala.api.PmmlModel.predict]]
     *
