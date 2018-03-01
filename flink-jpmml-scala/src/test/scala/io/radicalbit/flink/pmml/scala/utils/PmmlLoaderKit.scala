@@ -26,16 +26,16 @@ import org.xml.sax.InputSource
 trait PmmlLoaderKit {
 
   protected case object Source {
-    val KmeansPmml = "/kmeans.xml"
-    val KmeansPmml41 = "/kmeans41.xml"
-    val KmeansPmml40 = "/kmeans40.xml"
-    val KmeansPmml42 = "/kmeans42.xml"
-    val KmeansPmml32 = "/kmeans41.xml"
+    val KmeansPmml = "/PMML/kmeans.xml"
+    val KmeansPmml41 = "/PMML/kmeans41.xml"
+    val KmeansPmml40 = "/PMML/kmeans40.xml"
+    val KmeansPmml42 = "/PMML/kmeans42.xml"
+    val KmeansPmml32 = "/PMML/kmeans41.xml"
 
-    val KmeansPmmlEmpty = "/kmeans_empty.xml"
-    val KmeansPmmlNoOut = "/kmeans_nooutput.xml"
-    val KmeansPmmlStringFields = "/kmeans_stringfields.xml"
-    val KmeansPmmlNoOutNoTrg = "/kmeans_nooutput_notarget.xml"
+    val KmeansPmmlEmpty = "/PMML/kmeans_empty.xml"
+    val KmeansPmmlNoOut = "/PMML/kmeans_nooutput.xml"
+    val KmeansPmmlStringFields = "/PMML/kmeans_stringfields.xml"
+    val KmeansPmmlNoOutNoTrg = "/PMML/kmeans_nooutput_notarget.xml"
     val NotExistingPath: String = "/not/existing/" + scala.util.Random.nextString(4)
   }
 
