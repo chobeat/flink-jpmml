@@ -26,6 +26,6 @@ object Commons {
 
   val settings: Seq[Def.Setting[_]] = Seq(
     organization := "io.radicalbit",
-    scalaVersion in ThisBuild := "2.11.8"
+    scalaVersion in ThisBuild := "2.10.6"
   )
 }

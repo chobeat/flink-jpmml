@@ -32,7 +32,6 @@ object Dependencies {
       flink.ml,
       jpmml.evaluator,
       logging.slf4j,
-      pfa.evaluator,
       // Test utils
       asm.assembly % Test,
       flink.utils % Test,
@@ -68,12 +67,6 @@ object Dependencies {
     lazy val namespace = "org.jpmml"
     lazy val version = "1.3.9"
     lazy val evaluator = namespace % "pmml-evaluator" % version
-  }
-
-  private object pfa {
-    lazy val namespace = "com.opendatagroup"
-    lazy val version = "0.8.3"
-    lazy val evaluator = namespace % "hadrian" % version
   }
 
   object logging {
